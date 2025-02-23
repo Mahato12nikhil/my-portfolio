@@ -1,0 +1,35 @@
+.navigation{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.navigation li{
+    display: inline-flex;
+    align-items: center;
+    gap:0.2rem;
+    border-radius: 2rem;
+    font-size: large;
+    transition: background-color 0.3s;
+}
+.navigation li:hover{
+    background-color: aqua;
+}
+.navigation li:hover span{
+    display: inline-flex;
+}
+.navigation li:hover .nav_icon{
+    background-color: transparent;
+}
+.navigation li span{
+    display: none;
+    padding-right: 1rem;
+}
+.active .nav_icon{
+    background-color: aqua;
+}
+.nav_icon{
+    background-color: lightgray;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}

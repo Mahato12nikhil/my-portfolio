@@ -1,0 +1,27 @@
+.card{
+    width: 300px;
+    height:auto;
+    display: block;
+    background-color: white;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+.card :nth-child(1){
+    text-align: center;
+}
+.card :nth-child(2){
+    text-align: center;
+    color:rgba(0, 0, 0, 0.5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    gap: 5px; 
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:rgba(43, 157, 188, 0.8); ;
+}

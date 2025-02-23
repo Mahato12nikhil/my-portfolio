@@ -1,0 +1,15 @@
+.section_title_container{
+    display:inline-flex ;
+    align-items: center;
+}
+.stickpad{
+    display: inline-block;
+    height: 3rem;
+    width: 0.5rem;
+    background-color: aqua;
+}
+.section_title_container > span{
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: black;
+}

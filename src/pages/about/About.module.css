@@ -1,0 +1,26 @@
+.container{
+    height: 100vh;
+    background-image: linear-gradient(to right, white, rgb(248, 248, 248));
+}
+.about_content{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    margin-left: 2%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.image_about :nth-child(2) i{
+    color:dimgray
+}
+.image_about {
+    display: flex;
+    justify-content: center;
+}
+
+.skill_showcase{
+    
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
