@@ -1,12 +1,13 @@
 import "./App.css";
+import { ThemeProvider } from "./hooks/useTheme";
 import AppRoutes from "./routes/AppRoutes";
 
 function App() {
 
   return (
-    <div className="App">
-      <AppRoutes />
-    </div>
+    <ThemeProvider> 
+        <AppRoutes />
+    </ThemeProvider>
   );
 }
 

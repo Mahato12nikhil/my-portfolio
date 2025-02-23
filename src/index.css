@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; 
+
+}
+
+:root {
+  --app-color:#00FFFF;
+  --bg-color: #ffffff;
+  --text-main-color: #000000;
+}
+
+[data-theme="dark"] {
+  --app-color:#00FFFF;
+  --bg-color: #000000;
+  --text-main-color: #ffffff;
+}

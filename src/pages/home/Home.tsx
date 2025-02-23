@@ -5,10 +5,12 @@ import About from '../about/About';
 import Experience from '../experience/Experience';
 import Project from '../projects/Project';
 import Contact from '../contact/Contact';
+import { useTheme } from '../../hooks/useTheme';
 
 const Home: React.FC = () => {
     const sections:string[] = ['home', 'about', 'journey','projects','contact'];
     const [activeSection, setActiveSection] = useState('home');
+    const { theme,toggleTheme}=useTheme();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -38,11 +40,13 @@ const Home: React.FC = () => {
 
     return (
         <div className={styles.container}>
+
             <div className={styles.home_background} />
+            <div onClick={toggleTheme} className={styles.toggleButton}>{theme==="light"?"🌙":"☀️"}</div>
 
             <div className={styles.navigation_container}>
                 <NavigationBar activeSection={activeSection} />
-            </div>
+            </div>  
 
             <div className={styles.sections}>
                 <section id="home" className={styles.sig_designation_cont}> 
