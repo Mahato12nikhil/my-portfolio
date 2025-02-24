@@ -15,11 +15,11 @@ const About=()=>{
                         <div style={{marginTop:'0.5rem'}}>
                             <address>
                                 <br/>
-                                <MdArrowForwardIos size="1rem"/> Purulia, West Bengal, India.<br/>
+                                <MdArrowForwardIos size="1rem"  className={styles.content_text}/> <span className={styles.content_text}>Purulia, West Bengal, India.</span><br/>
                                 <br/>
-                                <MdArrowForwardIos size="1rem"/> <a href='mailto:Nikhilmahato400@gmail.com' style={{textDecoration:"none",color:'black'}}> Nikhilmahato400@gmail.com</a><br/>
+                                <MdArrowForwardIos size="1rem" className={styles.content_text}/> <a href='mailto:Nikhilmahato400@gmail.com' className={styles.content_text}> Nikhilmahato400@gmail.com</a><br/>
                                 <br/>
-                                <MdArrowForwardIos size="1rem"/><a href="tel:+917363957907" style={{textDecoration:"none",color:'black'}}> +91 7363957907</a>
+                            <MdArrowForwardIos size="1rem" className={styles.content_text}/><a href="tel:+917363957907" className={[styles.content_text].join("")}> +91 7363957907</a>
                             </address>
                         </div>
                     </div>

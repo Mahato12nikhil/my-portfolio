@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import { CiHome, CiUser, CiRoute } from "react-icons/ci";
 import { LuLayers } from "react-icons/lu";
-import { GiAchievement } from "react-icons/gi";
+import { IoCallOutline } from "react-icons/io5";
 import './css/NavigationBar.css'
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ const NavigationBar = ({activeSection}:NavProps) => {
         { name: "About", icon: CiUser, path: "/about" },
         { name: "Journey", icon: CiRoute, path: "/journey" },
         { name: "Projects", icon: LuLayers, path: "/projects" },
-        { name: "Contact", icon: GiAchievement, path: "/contact" },
+        { name: "Contact", icon: IoCallOutline, path: "/contact" },
     ];
 
 

@@ -32,7 +32,7 @@
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: rgb(250, 250, 250);
+  background-color: var(--bg-color);
   border: 4px solid aqua;
   top: 15px;
   border-radius: 50%;

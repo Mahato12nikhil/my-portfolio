@@ -11,5 +11,5 @@
 .section_title_container > span{
     margin-left: 1rem;
     font-size: 2rem;
-    color: black;
+    color: var(--text-main-color);
 }

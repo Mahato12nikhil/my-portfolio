@@ -5,13 +5,13 @@ const skills = ["html", "css", "javascript", "node", "react", "xml", "git", "and
 
 const ITEMS_PER_SCROLL = 6;
 
-// Load images dynamically using Vite's `import.meta.glob`
-const images = import.meta.glob<string>("/src/assets/images/*.png", { eager: true });
-
 const HorizontalSlider = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    function getImageUrl(name:string){
+        return new URL(`../assets/images/${name}.png`, import.meta.url).href
+    }
     useEffect(() => {
         const interval = setInterval(() => {
             if (sliderRef.current) {
@@ -31,13 +31,10 @@ const HorizontalSlider = () => {
         <div className={styles.slider_wrapper}>
             <div className={styles.slider_container} ref={sliderRef}>
                 {skills.map((skill, index) => {
-                    const imagePath = `../assets/images/${skill}.png`;
-                    const imageSrc = images[imagePath] as string;
-
                     return (
                         <img 
                             key={index} 
-                            src={imageSrc} 
+                            src={getImageUrl(skill)} 
                             className={styles.skill_image} 
                             alt={`${skill} logo`} 
                         />

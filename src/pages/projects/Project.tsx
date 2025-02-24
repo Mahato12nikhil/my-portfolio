@@ -26,7 +26,7 @@ const Project:React.FC<{}>=()=>{
     return (
         <div className={styles.container}>
             
-            <div style={{marginLeft:'10%',marginTop:'5%',width:'100%'}}> <SectionTitle title='Projects'/></div>
+            <div style={{marginLeft:'10%',marginTop:'5%',width:'100%'}} className=""> <SectionTitle title='Projects'/></div>
             <div className={styles.content}>
                 {projects.map((project, ind)=>{
                     return <Card key={ind} {...project}/>
