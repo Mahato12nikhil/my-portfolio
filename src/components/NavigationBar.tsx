@@ -51,7 +51,7 @@ const NavigationBar = ({activeSection}:NavProps) => {
             {icons.map((val, key) => (
                <li key={key} onClick={()=>onSectionSelect(val.path, val.name.toLowerCase())} style={{ cursor: "pointer" }} className={activeSection===val.name.toLowerCase()?'active':''}>
                     <val.icon size="3rem" className="nav_icon "/>
-                    <span>{val.name}</span>
+                    <span style={{userSelect:"none"}}>{val.name}</span>
                 </li>
             ))}
         </ul>
