@@ -85,5 +85,17 @@
 @media screen and (max-width: 768px){
     *{
         font-size: 12px;
+        
+    }
+    .home_background{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .navigation_container{
+        position: fixed;
+        top: 90%;
+        left:50%;
+        z-index: 2;
+        transform: translateX(-50%);
     }
 }
