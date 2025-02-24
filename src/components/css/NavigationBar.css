@@ -25,6 +25,9 @@
     display: none;
     padding-right: 1rem;
 }
+.active{
+    user-select: none;
+}
 .active .nav_icon{
     background-color: aqua;
 }
