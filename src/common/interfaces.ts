@@ -1,7 +1,10 @@
 
-// interface xy{
-
-// }
-// export interface genericInterface<T extends xy>{
-
-// }
+export interface IUser{
+    id: number;
+    name:string,
+    email:string,
+    phone?:string,
+    username:string,
+    role?:string,
+    validity?:bigint
+}
