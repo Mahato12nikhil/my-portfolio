@@ -38,9 +38,10 @@ const Home: React.FC = () => {
         return () => observer.disconnect();
     });
 
+
     return (
         <div className={styles.container}>
-
+         
             <div className={styles.home_background} />
             <div onClick={toggleTheme} className={styles.toggleButton}>{theme==="light"?"🌙":"☀️"}</div>
 
