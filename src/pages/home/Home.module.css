@@ -98,3 +98,61 @@
         transform: translateX(-50%);
     }
 }
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .heroName {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--text-main-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .heroRole {
+    font-size: 2.5rem;
+    color: var(--text-main-color);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .heroTagline {
+    font-size: 1.2rem;
+    color: var(--text-main-color);
+    max-width: 60ch;
+    font-style: italic;
+  }
+  
+  .signature {
+    width: 200px;
+    height: auto;
+    margin-top: 1rem;
+    filter: brightness(1.2);
+  }
+  .animatedSignature path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 3s ease-in-out forwards;
+    stroke: var(--text-main-color);
+    fill: none;
+    stroke-width: 2;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
