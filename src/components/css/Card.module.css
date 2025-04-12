@@ -61,4 +61,19 @@
   .content a:hover {
     color: #007b9a;
   }
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .toolTag {
+    background-color: var(--bg-color, #eee);
+    color: var(--text-main-color, #333);
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
   
