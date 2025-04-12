@@ -1,10 +1,8 @@
 .timeline {
   position: relative;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: "";
   position: absolute;
@@ -12,11 +10,10 @@
   background-color: aqua;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 10%;
   margin-left: -3px;
 }
 
-/* Container around content */
 .container {
   padding: 10px 40px;
   position: relative;
@@ -25,31 +22,31 @@
   overflow: visible;
 }
 
-/* The circles on the timeline */
 .container::after {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: var(--bg-color);
-  border: 4px solid aqua;
+  width: 30px;
+  height: 30px;
+  right: -20px;
+  background-image: url('../../assets/images/tcs_logo.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid aqua;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
+  background-color: var(--card-color); 
 }
 
-/* Place the container to the left */
 .left {
   left: 0;
 }
 
-/* Place the container to the right */
 .right {
-  left: 50%;
+  left: 10%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .left::before {
   content: " ";
   height: 0;
@@ -63,7 +60,6 @@
   border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
   content: " ";
   height: 0;
@@ -74,38 +70,104 @@
   left: 30px;
   border: medium solid white;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent var(--card-color) transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
   left: -16px;
 }
 
-/* The actual content */
 .content {
-  padding: 20px 30px;
-  background-color: white;
+  padding: 24px 32px;
+  background: linear-gradient(145deg, var(--card-color));
+  border-radius: 12px;
   position: relative;
-  border-radius: 6px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
+.content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+.content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: #00bcd4;
+}
+
+.content p {
+  margin: 0.3rem 0;
+  line-height: 1.6;
+  color: var(--text-main-color);
+  font-size: 0.95rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text-main-color);
+  /* text-decoration: underline; */
+  margin-top: 1rem;
+}
+
+.sectionHeading {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: #006064;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e0f7fa;
+  color: #00796b;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin: 4px 4px 4px 0;
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  background-color: #b2ebf2;
+  color: #004d40;
+}
+
+.experienceBlock {
+  margin-top: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ccc;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
   .timeline::after {
     left: 31px;
   }
 
-  /* Full-width containers */
   .container {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
-  /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
     border: medium solid white;
@@ -113,13 +175,11 @@
     border-color: transparent white transparent transparent;
   }
 
-  /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
     left: 15px;
   }
 
-  /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
   }

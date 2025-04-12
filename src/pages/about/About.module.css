@@ -1,31 +1,123 @@
-.container{
+.container {
     max-width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(to right, var(--bg-color), var(--bg-color));
-}
-.about_content{
+    padding: 2rem 1rem;
     display: flex;
-    width: 100%;
-    height: 80%;
-    margin-left: 2%;
     flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionTitleWrapper {
+    width: 100%;
+    margin-left: 20%;
+  }
+  
+  .aboutContent {
+    display: flex;
     justify-content: space-around;
-    color: var(--bg-color);
-}
-
-.image_about :nth-child(2) i{
-    color:dimgray
-}
-.image_about {
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-left: 10%;
+  }
+  
+  .imageSection {
+    flex: 1;
     display: flex;
     justify-content: center;
-}
-
-.skill_showcase{
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-.content_text{
-    text-decoration:"none";
-    color:var(--text-main-color)
-}
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .profileImage {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px var(--image-shadow-color);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+  
+  .profileImage:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+  
+  .textSection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .textSection h1 {
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: var(--secondary-text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .icon {
+    color: var(--primary-text-color);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  
+  .info a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: color 0.3s ease;
+  }
+  
+  .info a:hover {
+    color: var(--hover-text-color);
+  }
+  
+  .sliderSection {
+    margin-top: 3rem;
+    width: 90%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .aboutContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .textSection h1 {
+      font-size: 2rem;
+    }
+  
+    .quote {
+      text-align: center;
+    }
+  
+    .profileImage {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .sliderSection {
+      margin-top: 2rem;
+    }
+  }
+  

@@ -72,9 +72,7 @@
     z-index: 1; 
 }
 .section_container{
-    height: 100vh;
-    background-color: white;
-
+    background-color: var(--bg-color);
 }
 .experience_container{
     min-height: 100vh;

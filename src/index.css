@@ -1,19 +1,30 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden; 
-
 }
 
+/* Default (Light Theme) */
 :root {
-  --app-color:#00FFFF;
+  --app-color: #00FFFF;
   --bg-color: #ffffff;
+  --card-color:#f9f9f9;
   --text-main-color: #000000;
+  --secondary-text-color: #616161;
+  --primary-text-color: #00796b;
+  --hover-text-color: #004d40;
+  --image-shadow-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Dark Theme */
 [data-theme="dark"] {
-  --app-color:#00FFFF;
-  --bg-color: #000000;
+  --app-color: #00FFFF;
+  --bg-color: #232323;
+  --card-color:#353535;
   --text-main-color: #ffffff;
+  --secondary-text-color: #b0b0b0;
+  --primary-text-color: #80cbc4;
+  --hover-text-color: #004d40;
+  --image-shadow-color: rgba(255, 255, 255, 0.2);
 }
