@@ -14,6 +14,7 @@
     height: 2rem;
     display: flex;
     align-items: center;
+    text-decoration: none;
     justify-content: center;
     background: linear-gradient(145deg, var(--text-main-color),  var(--text-main-color));
     color: var(--text-main-color);
