@@ -80,3 +80,8 @@
 .submitButton:hover {
     background-color: rgb(0, 180, 180);
 }
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
